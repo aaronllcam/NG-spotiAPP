@@ -1,0 +1,18 @@
+<app-error *ngIf="error"></app-error>
+
+<app-loading *ngIf="loading && !error"></app-loading>
+
+<div *ngIf="!loading" class="card-columns animated fadeIn">
+
+    <app-cards [item]="item" *ngFor="let item of newReleases"></app-cards>
+    <!-- <div *ngFor="let newRelease of newReleases" class="card">
+        <img [src]="newRelease.images | noimage" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ newRelease.name }}</h5>
+            <p class="card-text">
+                <span *ngFor="let artists of newRelease.artists" class="badge badge-pill badge-dark">{{ artists.name }}</span>
+
+            </p>
+        </div>
+    </div> -->
+</div>

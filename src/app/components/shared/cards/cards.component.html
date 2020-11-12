@@ -1,0 +1,12 @@
+
+    <div (click)="showArtist( item )" class="card puntero">
+        <img [src]="item.images | noimage" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">
+                <span *ngFor="let artists of item.artists" class="badge badge-pill badge-dark">{{ artists.name }}</span>
+
+            </p>
+            <p style="color:red">{{item.id}}</p>
+        </div>
+    </div>
